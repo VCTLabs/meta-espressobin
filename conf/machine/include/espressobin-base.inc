@@ -39,7 +39,10 @@ PREFERRED_PROVIDER_linux ?= "linux-espressobin"
 PREFERRED_PROVIDER_u-boot ?= "u-boot-espressobin"
 PREFERRED_PROVIDER_arm-trusted-firmware ?= "arm-trusted-firmware-espressobin"
 
-IMAGE_FSTYPES += "tar.bz2"
+IMAGE_FSTYPES += "tar.bz2 ext4 wic"
+sdcard-esp.wks
+WKS_FILE ?= "sdcard-esp.wks"
+
 IMAGE_BOOT_FILES = "Image;Image"
 
 KERNEL_IMAGETYPE = "Image"
