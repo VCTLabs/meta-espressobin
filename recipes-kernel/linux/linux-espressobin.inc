@@ -27,3 +27,6 @@ SRC_URI += "git://kernel.googlesource.com/pub/scm/linux/kernel/git/stable/linux;
 S = "${WORKDIR}/git"
 
 COMPATIBLE_MACHINE = "(espressobin-v5|espressobin-v7)"
+
+# sd card is slow to probe
+CMDLINE_append = " rootwait"
